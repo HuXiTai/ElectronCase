@@ -1,0 +1,12 @@
+{
+  "name": "ElectronCase",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/HuXiTai/ElectronCase.git",
+  "author": "胡熙泰 <huxitai_01@163.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
