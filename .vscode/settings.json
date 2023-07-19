@@ -1,0 +1,48 @@
+{
+  "editor.detectIndentation": true,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "javascript.format.enable": false,
+  "typescript.format.enable": false,
+  "html.format.enable": false,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "html",
+    "vue"
+  ],
+  "stylelint.validate": [
+    "css",
+    "less",
+    "scss",
+    "vue",
+  ],
+  "eslint.format.enable": true,
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "npm.packageManager": "yarn",
+  "json.schemaDownload.enable": false,
+  "files.eol": "\n",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vue.features.codeActions.enable": false
+}
