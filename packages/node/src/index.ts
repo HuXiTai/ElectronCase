@@ -1,7 +1,11 @@
-function greeter(person) {
-  return "Hello, " + person;
-}
+// 解决 Electron Security Warning
+process.env[ "ELECTRON_DISABLE_SECURITY_WARNINGS" ] = "true";
 
-let user = "Jane User";
+import path from "path";
+import "./utils/nodeSub";
+import MainWin from "./windows/main";
 
-document.body.innerHTML = greeter(user);
+new MainWin({url: "http://localhost:5173/", route: ""});
+
+export const iconPngPath = path.join(__dirname, "../assets/icon.png")
+

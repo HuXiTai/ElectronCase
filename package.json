@@ -1,12 +1,27 @@
 {
   "name": "ElectronCase",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./src/index.js",
   "repository": "https://github.com/HuXiTai/ElectronCase.git",
   "author": "胡熙泰 <huxitai_01@163.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "web-dev": "cd ./packages/web && npx vite dev",
+    "node-dev": "npx gulp nodeBuild && cd ./packages/node && chcp 65001 && npx electron .\\dist\\src\\index.js",
+    "types-build": "cd ./packages/types && npx --no-install tsc -d",
+    "web-build": "cd ./packages/web && npx --no-install vue-tsc --noEmit && npx --no-install vite build",
+    "node-build": "npx --no-install gulp nodeBuild"
+  },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "del": "6.1.1",
+    "electron-builder": "^24.4.0",
+    "electron-packager": "^17.1.1",
+    "gulp": "^4.0.2",
+    "ncp": "^2.0.0",
+    "zip-a-folder": "^2.0.0"
+  }
 }

@@ -1,5 +1,6 @@
 import { app, Menu, Tray, screen, BrowserWindow } from "electron";
 import path from "path";
+import { iconPngPath } from "..";
 
 const isDev = !app.isPackaged;
 app.disableHardwareAcceleration();
@@ -7,7 +8,7 @@ app.disableHardwareAcceleration();
 app.commandLine.appendSwitch("ignore-certificate-errors");
 
 type createType = {
-  url: string, route:string
+  url: string, route: string
 }
 
 export default class MainWin {
@@ -19,7 +20,6 @@ export default class MainWin {
 
   static tray: Tray; // 托盘对象
   static win: BrowserWindow | undefined; // 窗口实例
-  static iconPath = isDev ? path.join(__dirname, "../../icon.png") : path.join(__dirname, "../icon.png");
 
   start (url: string, route: string): void {
     app.whenReady()
@@ -41,7 +41,7 @@ export default class MainWin {
           maxHeight: height,
           maxWidth: width,
           frame: false,
-          icon: MainWin.iconPath,
+          icon: iconPngPath,
           title: "ElectronCase",
           autoHideMenuBar: true,
           webPreferences: {
@@ -81,7 +81,7 @@ export default class MainWin {
 
   tray (): void {
     app.on("ready", () => {
-      MainWin.tray = new Tray(MainWin.iconPath);
+      MainWin.tray = new Tray(iconPngPath);
 
       MainWin.tray.setToolTip("ElectronCase");
 
@@ -105,7 +105,7 @@ export default class MainWin {
       MainWin.tray.on("click", () => {
         MainWin.win?.show();
         MainWin.win?.flashFrame(false);
-        MainWin.tray.setImage(MainWin.iconPath);
+        MainWin.tray.setImage(iconPngPath);
       });
 
       MainWin.tray.setContextMenu(contextMenu);

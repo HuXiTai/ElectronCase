@@ -6,8 +6,8 @@ contextBridge.exposeInMainWorld("ipcRenderer", ipcRenderer);
 
 // 渲染进程订阅
 contextBridge.exposeInMainWorld("on", {
-  maximize: (callback: Callback) => ipcRenderer.on("web-maximize", callback),
-  unmaximize: (callback: Callback) => ipcRenderer.on("web-unmaximize", callback),
-  close: (callback: Callback) => ipcRenderer.on("web-close", callback),
+  maximize: (callback: Callback) => ipcRenderer.on("maximize", callback),
+  unmaximize: (callback: Callback) => ipcRenderer.on("unmaximize", callback),
+  close: (callback: Callback) => ipcRenderer.on("close", callback),
 });
 
