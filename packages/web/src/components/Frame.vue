@@ -7,7 +7,7 @@
       <img :width="20" :src="props.logo" v-if="props.logo"/>
       <span class="text">{{ props.title }}</span>
     </div>
-
+    
     <template
       v-for="item of props.frameList"
       :key="item.title"

@@ -9,8 +9,9 @@
 <script setup lang="ts">
 import Frame from "./components/Frame.vue";
 import icon from "./assets/img/icon.png"
+import { reactive } from "vue";
 
-const frameList = [
+const frameList = reactive([
   {
     title: "最小化",
     icon: "<svg class=\"icon\" viewBox=\"0 0 1024 1024\" version=\"1.1\" p-id=\"2058\"><path d=\"M929.8 528.1H93.5c-15.5 0-28-12.5-28-28s12.5-28 28-28h836.3c15.5 0 28 12.5 28 28s-12.5 28-28 28z\" fill=\"\" p-id=\"2059\"/></svg>",
@@ -46,24 +47,21 @@ const frameList = [
       window.ipcRenderer.send("win-operate",{win: "MainWin", operate: "quit"})
     },
   },
-];
+]) ;
+
 
 // 主窗口放大缩小
 window.on.maximize(() => {
-  console.log(123);
-  
-  frameList[1].isShow = true
-  frameList[2].isShow = false
-  
+  frameList[1].isShow = false
+  frameList[2].isShow = true
 });
 
 // 主窗口最小化
 window.on.unmaximize(() => {
-  console.log(321);
-  
-  frameList[1].isShow = false
-  frameList[2].isShow = true
+  frameList[1].isShow = true
+  frameList[2].isShow = false
 });
+
 </script>
 
 <style scoped lang="less">
