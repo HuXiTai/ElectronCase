@@ -3,6 +3,7 @@
     "stylelint.vscode-stylelint",
     "dbaeumer.vscode-eslint",
     "Vue.volar", 
-    "Vue.vscode-typescript-vue-plugin"
+    "Vue.vscode-typescript-vue-plugin",
+    "ms-ceintl.vscode-language-pack-zh-hans"
   ]
 }

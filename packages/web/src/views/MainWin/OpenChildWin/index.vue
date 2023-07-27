@@ -1,5 +1,5 @@
 <template>
-  <router-view />
+  <el-button type="primary">打开子窗口</el-button>
 </template>
 
 <script setup lang="ts">

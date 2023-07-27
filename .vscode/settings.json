@@ -1,8 +1,8 @@
 {
-  "editor.detectIndentation": true,
-  "editor.tabSize": 2,
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
+  "editor.detectIndentation": true, // 打开文件时是否自动检测
+  "editor.tabSize": 2, // 制表符大小
+  "editor.formatOnSave": true, // 保存时格式化
+  "editor.codeActionsOnSave": { // 保存时的代码操作
     "source.fixAll": true
   },
   "javascript.format.enable": false,
@@ -11,38 +11,36 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  "eslint.validate": [
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint", // 默认格式化工具
+  "eslint.validate": [ // eslint批准
     "javascript",
     "typescript",
     "html",
     "vue"
   ],
-  "stylelint.validate": [
+  "stylelint.validate": [ // stylelint批准
     "css",
     "less",
     "scss",
     "vue",
   ],
-  "eslint.format.enable": true,
-  "eslint.codeAction.showDocumentation": {
+  "eslint.format.enable": true, // 启用ESLint作为格式化程序
+  "eslint.codeAction.showDocumentation": { // 在快速修复菜单中显示打开的lint规则文档网页
     "enable": true
   },
-  "eslint.alwaysShowStatus": true,
-  "npm.packageManager": "yarn",
-  "json.schemaDownload.enable": false,
-  "files.eol": "\n",
+  "npm.packageManager": "yarn", // 使用yarn作为运行脚本的包管理器
+  "json.schemaDownload.enable": false, // 启用后，可以从http和https位置获取JSON模式
+  "files.eol": "\n", // 默认的行尾字符
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // json的格式化工具
   },
   "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint" // typescript的格式化工具
   },
   "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint" // vue的格式化工具
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // javascript的格式化工具
   },
-  "vue.features.codeActions.enable": false
 }

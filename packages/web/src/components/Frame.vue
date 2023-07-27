@@ -49,6 +49,7 @@ const props = defineProps<{
   width: 100%;
   height: 30px;
   -webkit-app-region: drag;
+  background-color: #dedfe0;
 
   .title {
     position: absolute;
