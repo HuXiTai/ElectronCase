@@ -16,6 +16,10 @@ const routes: Array<RouteRecordRaw> = [
      ], 
   },
   {
+     path: '/show-record', 
+     component: () => import("../views/ShowRecord/index.vue"),
+  },
+  {
     path: '/',
     redirect: '/main-win'
   },

@@ -40,7 +40,7 @@ export default class ChildWin {
 
         // 加载页面
         if (isDev) {
-          ChildWin.win?.loadURL(url);
+          ChildWin.win?.loadURL(url + route);
         } else {
           ChildWin.win?.loadFile(url, {
             hash: route,

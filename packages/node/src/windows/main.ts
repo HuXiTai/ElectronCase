@@ -55,6 +55,8 @@ export default class MainWin {
         // 加载页面
         if (isDev) {
           MainWin.win?.loadURL(url + route);
+          console.log(url + route);
+          
         } else {
           MainWin.win?.loadFile(url, {
             hash: route,
